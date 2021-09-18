@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+svg > path {
+  stroke-width: 1;
+}
+
+.btn {
+  @apply rounded-3xl px-6 py-2 transition-colors;
+}
+
+.btn.primary {
+  @apply bg-primary text-white hover:bg-primary-dark hover:transition-colors;
+}
+
+.btn.outline {
+  @apply bg-transparent text-primary border border-solid border-primary hover:text-primary-dark hover:border-primary-dark hover:transition-colors;
+}
+
+.btn.secondary {
+  @apply bg-secondary text-primary hover:bg-secondary-light hover:transition-colors;
+}
+
+.btn.icon {
+  @apply bg-transparent border-0 text-default hover:text-default-light hover:bg-transparent px-0 py-0 rounded-none hover:transition-colors;
+}
+
+.btn.tag {
+  @apply bg-tag text-default rounded-2xl text-sm hover:bg-tag hover:shadow hover:transition-shadow;
+}
+
+.dot {
+  @apply bg-default-light w-0.5 h-0.5 rounded mx-2
+}
