@@ -90,7 +90,7 @@ const posts = [
     featuredImg: 'https://picsum.photos/500/425',
   },
   {
-    id: '3',
+    id: '4',
     title: 'Best Practices For Modal Window Design',
     description:
       'Best Practices For Modal Window Design Best Practices For Modal Window Design',
@@ -120,7 +120,7 @@ const posts = [
     featuredImg: 'https://picsum.photos/500/425',
   },
   {
-    id: '3',
+    id: '5',
     title: 'Best Practices For Modal Window Design',
     description:
       'Best Practices For Modal Window Design Best Practices For Modal Window Design',
@@ -150,7 +150,7 @@ const posts = [
     featuredImg: 'https://picsum.photos/500/425',
   },
   {
-    id: '3',
+    id: '6',
     title: 'Best Practices For Modal Window Design',
     description:
       'Best Practices For Modal Window Design Best Practices For Modal Window Design',
@@ -180,7 +180,7 @@ const posts = [
     featuredImg: 'https://picsum.photos/500/425',
   },
   {
-    id: '3',
+    id: '7',
     title: 'Best Practices For Modal Window Design',
     description:
       'Best Practices For Modal Window Design Best Practices For Modal Window Design',
@@ -210,7 +210,7 @@ const posts = [
     featuredImg: 'https://picsum.photos/500/425',
   },
   {
-    id: '3',
+    id: '8',
     title: 'Best Practices For Modal Window Design',
     description:
       'Best Practices For Modal Window Design Best Practices For Modal Window Design',
@@ -240,7 +240,7 @@ const posts = [
     featuredImg: 'https://picsum.photos/500/425',
   },
   {
-    id: '3',
+    id: '9',
     title: 'Best Practices For Modal Window Design',
     description:
       'Best Practices For Modal Window Design Best Practices For Modal Window Design',
@@ -270,7 +270,7 @@ const posts = [
     featuredImg: 'https://picsum.photos/500/425',
   },
   {
-    id: '3',
+    id: '10',
     title: 'Best Practices For Modal Window Design',
     description:
       'Best Practices For Modal Window Design Best Practices For Modal Window Design',
@@ -300,7 +300,7 @@ const posts = [
     featuredImg: 'https://picsum.photos/500/425',
   },
   {
-    id: '3',
+    id: '11',
     title: 'Best Practices For Modal Window Design',
     description:
       'Best Practices For Modal Window Design Best Practices For Modal Window Design',

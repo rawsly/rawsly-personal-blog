@@ -65,14 +65,14 @@ const Home = () => {
             <FeaturedCategories className="flex flex-col gap-y-4">
               <FeaturedCategories.Title className="text-100 font-bold text-lg">Öne çıkan kategoriler</FeaturedCategories.Title>
               <FeaturedCategories.Categories className="flex flex-row gap-x-4 gap-y-4 flex-wrap">
-                {categories.map(category => <Tag data={category} />)}
+                {categories.map(category => <Tag key={category.id} data={category} />)}
               </FeaturedCategories.Categories>
             </FeaturedCategories>
             <Space className="h-8" />
             <FeaturedPosts className="flex flex-col gap-y-4">
               <FeaturedPosts.Title className="text-100 font-bold text-lg">Öne çıkan makaleler</FeaturedPosts.Title>
               <FeaturedPosts.Posts className="flex flex-col gap-y-4">
-                {posts.slice(0, 5).map(post => <FeaturedPost data={post} />)}
+                {posts.slice(0, 5).map(post => <FeaturedPost key={post.id} data={post} />)}
               </FeaturedPosts.Posts>
             </FeaturedPosts>
             <Space className="h-8" />
