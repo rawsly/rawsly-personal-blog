@@ -1,0 +1,1 @@
+module.exports = ['AWAITING_APPROVAL', 'APPROVED', 'BLOCKED', 'REJECTED', 'REMOVED'];

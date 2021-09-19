@@ -1,0 +1,1 @@
+module.exports = ['PUBLISHED', 'DRAFT', 'READY_TO_PUBLISH', 'REJECTED'];
