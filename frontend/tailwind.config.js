@@ -7,7 +7,8 @@ module.exports = {
       colors: {
         primary: {
           DEFAULT: '#f56565',
-          dark: '#ed4a4a'
+          dark: '#ed4a4a',
+          light: '#ffb1c4',
         },
         secondary: {
           DEFAULT: '#f9f9f9',
@@ -27,7 +28,12 @@ module.exports = {
           light: '#34ba53',
         },
         white: '#fff',
-        black: '#000',
+        black: {
+          DEFAULT: '#000',
+          '100': '#111',
+          '200': '#222',
+          '300': '#333',
+        },
         default: {
           DEFAULT: '#545454',
           light: '#747474',
@@ -51,7 +57,7 @@ module.exports = {
       },
       flex: {
         '2': '2 2 0%',
-      }
+      },
     },
   },
   variants: {
