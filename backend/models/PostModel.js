@@ -51,6 +51,12 @@ const PostModel = new Schema({
     required: true,
     default: 'DRAFT'
   },
+  comments: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Comment'
+    }
+  ],
 
   createdAt: {
     type: Date,

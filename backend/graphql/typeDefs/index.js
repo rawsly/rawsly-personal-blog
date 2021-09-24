@@ -21,6 +21,7 @@ const typeDefs = gql`
     featuredImage: String
     duration: Int
     status: PostStatus!
+    comments: [Comment!]
 
     createdAt: String!
     updatedAt: String
@@ -35,6 +36,7 @@ const typeDefs = gql`
     profilePhoto: String
     status: PostStatus!
     bookmarkedPosts: [Post!]
+    role: Role
 
     createdAt: String!
     updatedAt: String
@@ -59,6 +61,12 @@ const typeDefs = gql`
     updatedBy: User
   }
 
+  type Comment implements BaseSchema {
+    _id: ID!
+    owner: User!
+    content: String!
+  }
+
   enum PostStatus {
     PUBLISHED
     DRAFT
@@ -74,6 +82,13 @@ const typeDefs = gql`
     REMOVED
   }
 
+  enum Role {
+    AUTHOR
+    ADMIN
+    MODERATOR
+    READER
+  }
+
   type Query {
     helloQuery: String
 
@@ -84,6 +99,8 @@ const typeDefs = gql`
     # CategoryQueries
 
     # TagQueries
+
+    # CommentQueries
   }
 
   type Mutation {
@@ -96,6 +113,8 @@ const typeDefs = gql`
     # CategoryMutations
 
     # TagMutations
+
+    # CommentMutations
   }
 `;
 

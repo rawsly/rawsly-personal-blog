@@ -3,6 +3,8 @@ const { ApolloServer } = require('apollo-server-express');
 const { ApolloServerPluginDrainHttpServer } = require('apollo-server-core');
 const http = require('http');
 const typeDefs = require('./graphql/typeDefs');
+const mongoose = require('mongoose');
+const { getUserByToken } = require('./graphql/resolvers/queries/UserQueries');
 
 const resolvers = {
   Query: {
@@ -29,8 +31,15 @@ async function startApolloServer() {
 
   // Mount Apollo middleware here.
   server.applyMiddleware({ app, path: '/api' });
-  await new Promise(resolve => httpServer.listen({ port: 4000 }, resolve));
-  console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`);
+  const dbUrl = `mongodb+srv://rawsly:Rawsly235844.@rawsly-blog.vw8i4.mongodb.net/rawsly?retryWrites=true&w=majority`;
+  try {
+    await mongoose.connect(dbUrl, { useNewUrlParser: true });
+    console.log('Connected to database successfully.');
+    await new Promise(resolve => httpServer.listen({ port: 4000 }, resolve));
+    console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`);
+  } catch (err) {
+    throw new Error('An error occurred while connecting to database.', err);
+  }
 
   return { server, app };
 }

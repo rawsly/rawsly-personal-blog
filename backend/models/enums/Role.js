@@ -1,0 +1,1 @@
+module.exports = ['AUTHOR', 'ADMIN', 'MODERATOR', 'READER'];
