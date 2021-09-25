@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const { Schema, model } = mongoose;
 
 const USER_STATUS = require('./enums/UserStatus');
-const ROLE = require('./enums/Role');
+const { ROLES } = require('./enums/Role');
 
 const UserModel = new Schema({
   username: {
@@ -35,7 +35,7 @@ const UserModel = new Schema({
   ],
   role: {
     type: String,
-    enum: ROLE,
+    enum: ROLES,
     required: true,
     default: 'READER',
   },

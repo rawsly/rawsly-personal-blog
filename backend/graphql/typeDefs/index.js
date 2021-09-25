@@ -65,6 +65,10 @@ const typeDefs = gql`
     _id: ID!
     owner: User!
     content: String!
+    
+    createdAt: String!
+    updatedAt: String
+    updatedBy: User
   }
 
   enum PostStatus {
@@ -90,9 +94,8 @@ const typeDefs = gql`
   }
 
   type Query {
-    helloQuery: String
-
     # UserQueries
+    me(id: String!): User
 
     # PostQueries
 
@@ -104,9 +107,9 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    helloMutation: String
-
     # UserMutations
+    # # returns jwt as string
+    login(email: String!, password: String!): String
 
     # PostMutations
 
