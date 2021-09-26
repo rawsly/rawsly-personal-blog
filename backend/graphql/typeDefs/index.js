@@ -65,6 +65,7 @@ const typeDefs = gql`
     _id: ID!
     owner: User!
     content: String!
+    parentComment: ID
     
     createdAt: String!
     updatedAt: String
@@ -93,12 +94,40 @@ const typeDefs = gql`
     READER
   }
 
+  input CreatePostInput {
+    title: String!
+    description: String!
+    content: String!
+    slug: String!
+    tags: [String!]
+    primaryCategory: String!
+    categories: [String!]
+    featuredImage: String
+    status: PostStatus
+  }
+
+  input UpdatePostInput {
+    title: String
+    description: String
+    content: String
+    slug: String
+    tags: [String]
+    primaryCategory: String
+    categories: [String]
+    featuredImage: String
+    status: PostStatus
+    duration: Int
+  }
+  
   type Query {
     # UserQueries
     me(id: String!): User
 
     # PostQueries
-
+    getPostById(id: String!): Post
+    getPosts: [Post]
+    getPostByUserId(userId: String!): [Post]
+    getPostsByCategoryId(categoryId: String!): [Post]
     # CategoryQueries
 
     # TagQueries
@@ -112,7 +141,8 @@ const typeDefs = gql`
     login(email: String!, password: String!): String
 
     # PostMutations
-
+    createPost(input: CreatePostInput!): Post
+    updatePost(input: UpdatePostInput!): Post
     # CategoryMutations
 
     # TagMutations

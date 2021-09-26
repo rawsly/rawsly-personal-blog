@@ -9,7 +9,11 @@ const CommentModel = new Schema({
   },
   content: {
     type: String,
-    required: true
+    required: true,
+  },
+  parentComment: {
+    type: Schema.Types.ObjectId,
+    ref: 'Comment',
   },
 
   createdAt: {
